@@ -11,7 +11,7 @@ struct LandmarkList: View {
     @EnvironmentObject var modelData: ModelData
     @State private var showFavoritesOnly = false
     
-    var filteredLandmarks: [Landmark] {
+    var filteredLandmarks: [Landmark] { 
         modelData.landmarks.filter { landmark in (!showFavoritesOnly || landmark.isFavorite)}
     }
     
